@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pembelajaran Koding dan Kecerdasan Artifisial (KKA)</title>
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2ecc71;
+            --accent-color: #e74c3c;
+            --text-color: #333;
+            --light-bg: #f9f9f9;
+            --dark-bg: #2c3e50;
+        }
+        
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--light-bg);
+            color: var(--text-color);
+            scroll-behavior: smooth;
+        }
+        
+        .slide-container {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            height: 100%;
+        }
+        
+        .slide {
+            min-width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 2rem;
+            box-sizing: border-box;
+        }
+        
+        .slide-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .title-slide {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-align: center;
+        }
+        
+        .title-slide .slide-content {
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            color: white;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+        
+        .title-slide h1 {
+            color: white;
+            font-size: 3rem;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--accent-color);
+        }
+        
+        p, li {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        
+        ul {
+            padding-left: 2rem;
+        }
+        
+        .controls {
+            position: fixed;
+            bottom: 20px;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            z-index: 100;
+        }
+        
+        button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: var(--secondary-color);
+        }
+        
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 5px;
+            background-color: var(--accent-color);
+            transition: width 0.3s;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            h3 {
+                font-size: 1.2rem;
+            }
+            
+            p, li {
+                font-size: 1rem;
+            }
+            
+            .slide-content {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="progress-bar" id="progressBar"></div>
+    
+    <div class="slide-container">
+        <div class="slides" id="slides">
+            <!-- Slide 1: Title -->
+            <div class="slide title-slide">
+                <div class="slide-content">
+                    <h1>Pembelajaran Koding dan Kecerdasan Artifisial (KKA)</h1>
+                    <h1>KELOMPOK 1</h1>
+                    <center>
+                        <table>
+                            <tr>
+                                <td width="50%">Ahmad Risal</td>
+                                <td width="50%">Chyquitha Danuputri</td>
+                            </tr>
+                            <tr>
+                                <td>Audy A. Kenap</td>
+                            <td>Muhammad Yassir</td>
+                        </tr>
+                        <tr>
+                            <td>Muhammad Ridha   </td>
+                            <td>Magisrahayu</td>
+                        </tr>
+                        <tr>
+                            <td>Marlina</td>
+                            <td>Muhammad Muhdi A.</td>
+                        </tr>
+                        <tr>
+                            <td>Nur Yetty W.</td>
+                            <td>Samsah S.</td>
+                        </tr>
+                    </table>
+                </center>
+                </div>
+            </div>
+            
+            <!-- Slide 2: Pendahuluan -->
+            <div class="slide">
+                <div class="slide-content">
+                    <h2>Pendahuluan</h2>
+                    <p>Mata pelajaran Koding dan Kecerdasan Artifisial (KKA) merupakan bagian penting dalam kurikulum nasional untuk mempersiapkan peserta didik menghadapi era digital. Pembelajaran KKA bertujuan untuk:</p>
+                    <ul>
+                        <li>Mengembangkan keterampilan berpikir komputasional</li>
+                        <li>Meningkatkan literasi digital peserta didik</li>
+                        <li>Memperkenalkan konsep dan etika kecerdasan artifisial</li>
+                        <li>Mempersiapkan peserta didik untuk masa depan yang semakin terdigitalisasi</li>
+                    </ul>
+                    <p>Namun, implementasi pembelajaran KKA di kelas menghadapi berbagai tantangan yang perlu diatasi.</p>
+                </div>
+            </div>
+            
+            <!-- Slide 3: Masalah 1 - Miskonsepsi -->
+            <div class="slide">
+                <div class="slide-content">
+                    <h2>Identifikasi Masalah</h2>
+                    <h3>1. Miskonsepsi Koding dan KA</h3>
+                    <p>Beberapa miskonsepsi umum dalam pembelajaran KKA:</p>
+                    <ul>
+                        <li>Koding sering disalahartikan sebagai pemrograman secara keseluruhan, padahal koding hanyalah bagian dari proses pemrograman yang fokus pada penulisan instruksi</li>
+                        <li>Anggapan bahwa pembelajaran KKA hanya bisa dilakukan dengan perangkat komputer (plugged coding), padahal pembelajaran juga bisa dilakukan tanpa komputer (unplugged coding)</li>
+                        <li>Persepsi bahwa kecerdasan artifisial akan menggantikan peran manusia sepenuhnya, padahal pendekatan "human-centered" menekankan bahwa manusia tetap menjadi fokus</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Slide 4: Masalah 2 - Kesulitan Pengukuran -->
+            <div class="slide">
+                <div class="slide-content">
+                    <h2>Identifikasi Masalah</h2>
+                    <h3>2. Kesulitan dalam Mengukur Ketercapaian Pembelajaran</h3>
+                    <p>Tantangan dalam mengukur ketercapaian pembelajaran KKA:</p>
+                    <ul>
+                        <li>KKA melibatkan keterampilan berpikir komputasional yang kompleks dan abstrak, seperti penalaran logis, kritis, dan kreatif</li>
+                        <li>Pembelajaran KKA mencakup berbagai elemen yang berbeda, masing-masing memerlukan metode penilaian yang berbeda</li>
+                        <li>Pembelajaran KKA tidak hanya berfokus pada kompetensi teknis, tetapi juga pada pengembangan diri peserta didik secara holistik</li>
+                        <li>Metode penilaian tradisional sering tidak mampu mengukur keterampilan kompleks yang dikembangkan dalam pembelajaran KKA</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Slide 5: Masalah 3 - Keterbatasan Fasilitas -->
+            <div class="slide">
+                <div class="slide-content">
+                    <h2>Identifikasi Masalah</h2>
+                    <h3>3. Keterbatasan Fasilitas dalam Mengajar KKA</h3>
+                    <p>Keterbatasan fasilitas yang sering dihadapi:</p>
+                    <ul>
+                        <li>Kurangnya perangkat komputer dan infrastruktur teknologi yang memadai di banyak sekolah</li>
+                        <li>Koneksi internet yang tidak stabil atau tidak ada, terutama di daerah pedesaan</li>
+                        <li>Keterbatasan perangkat lunak dan alat peraga untuk pembelajaran KKA</li>
+                        <li>Kurangnya sumber daya manusia yang kompeten dalam bidang KKA</li>
+                        <li>Kesenjangan digital antara sekolah di daerah perkotaan dan pedesaan</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Slide 6: Solusi untuk Miskonsepsi -->
+            <div class="slide">
+                <div class="slide-content">
+                    <h2>Solusi untuk Masalah dalam Pembelajaran KKA</h2>
+                    <h3>1. Mengatasi Miskonsepsi Koding dan KA</h3>
+                    <ul>
+                        <li>Melakukan klarifikasi konsep secara eksplisit dan konsisten tentang perbedaan koding dan pemrograman</li>
+                        <li>Mendemonstrasikan berbagai pendekatan pembelajaran KKA: plugged, unplugged, dan internet-based coding</li>
+                        <li>Menekankan pendekatan "human-centered" dalam pembelajaran KA</li>
+                        <li>Mengintegrasikan diskusi tentang etika KA dan dampak sosial dari teknologi KA</li>
+                        <li>Memberikan contoh konkret dan aplikasi nyata dari konsep-konsep KKA dalam kehidupan sehari-hari</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Slide 7: Solusi untuk Kesulitan Pengukuran -->
+            <div class="slide">
+                <div class="slide-content">
+                    <h2>Solusi untuk Masalah dalam Pembelajaran KKA</h2>
+                    <h3>2. Mengatasi Kesulitan dalam Mengukur Ketercapaian Pembelajaran</h3>
+                    <ul>
+                        <li>Mengembangkan sistem penilaian yang komprehensif dan beragam</li>
+                        <li>Menggunakan penilaian berbasis proyek yang memungkinkan siswa mendemonstrasikan pemahaman dalam konteks otentik</li>
+                        <li>Mengembangkan rubrik penilaian yang jelas dan spesifik untuk setiap elemen KKA</li>
+                        <li>Melibatkan siswa dalam proses penilaian melalui self-assessment dan peer-assessment</li>
+                        <li>Menggunakan portofolio untuk mendokumentasikan perkembangan keterampilan siswa secara berkelanjutan</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Slide 8: Solusi untuk Keterbatasan Fasilitas -->
+            <div class="slide">
+                <div class="slide-content">
+                    <h2>Solusi untuk Masalah dalam Pembelajaran KKA</h2>
+                    <h3>3. Mengatasi Keterbatasan Fasilitas</h3>
+                    <ul>
+                        <li>Mengoptimalkan pendekatan unplugged coding untuk mengajarkan konsep dasar tanpa komputer</li>
+                        <li>Memanfaatkan perangkat mobile yang dimiliki siswa atau sekolah sebagai alternatif komputer</li>
+                        <li>Mengorganisir pembelajaran kolaboratif di mana siswa berbagi perangkat yang tersedia</li>
+                        <li>Mengunduh materi pembelajaran dan aplikasi offline sebelumnya untuk mengatasi keterbatasan internet</li>
+                        <li>Menjalin kerjasama dengan institusi pendidikan tinggi, perusahaan teknologi, atau komunitas pengembang lokal</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Slide 9: Praktik Baik 1 & 2 -->
+            <div class="slide">
+                <div class="slide-content">
+                    <h2>Praktik Baik dalam Pembelajaran KKA</h2>
+                    <h3>1. Pendekatan Pembelajaran yang Kontekstual</h3>
+                    <p>Mengadopsi pendekatan kontekstual yang relevan dengan kehidupan sehari-hari siswa, menggunakan contoh-contoh dari lingkungan sekitar untuk membuat pembelajaran lebih bermakna.</p>
+                    
+                    <h3>2. Integrasi Etika dalam Pembelajaran KKA</h3>
+                    <p>Memfasilitasi diskusi tentang implikasi etis dari teknologi KA, termasuk isu-isu seperti privasi, bias algoritma, dan dampak sosial dari otomatisasi, mendorong siswa untuk mengembangkan kesadaran kritis.</p>
+                </div>
+            </div>
+            
+            <!-- Slide 10: Praktik Baik 3 & 4 -->
+            <div class="slide">
+                <div class="slide-content">
+                    <h2>Praktik Baik dalam Pembelajaran KKA</h2>
+                    <h3>3. Pendekatan Pembelajaran Berbasis Proyek</h3>
+                    <p>Menerapkan pembelajaran berbasis proyek (PBL) di mana siswa bekerja pada proyek otentik yang memerlukan penerapan berbagai konsep dan keterampilan KKA, mendorong pengembangan keterampilan abad ke-21.</p>
+                    
+                    <h3>4. Fleksibilitas dalam Implementasi Pembelajaran</h3>
+                    <p>Adaptif dalam memilih pendekatan pembelajaran yang sesuai dengan konteks dan sumber daya yang tersedia, baik itu internet-based, plugged, atau unplugged, serta mengakomodasi kebutuhan dan kemampuan siswa yang beragam.</p>
+                </div>
+            </div>
+            
+            <!-- Slide 11: Praktik Baik 5 & Kesimpulan -->
+            <div class="slide">
+                <div class="slide-content">
+                    <h3>5. Pengembangan Profesional Berkelanjutan bagi Pendidik</h3>
+                    <p>Pendidik perlu terus memperbarui pengetahuan dan keterampilan dalam bidang KKA melalui pelatihan, workshop, komunitas praktik, dan kolaborasi dengan rekan sejawat.</p>
+                    
+                    <h2>Kesimpulan</h2>
+                    <p>Pembelajaran Koding dan Kecerdasan Artifisial (KKA) memiliki peran penting dalam mempersiapkan peserta didik menghadapi era digital. Meskipun menghadapi berbagai tantangan, dengan strategi yang tepat dan praktik baik yang konsisten, pembelajaran KKA dapat diimplementasikan secara efektif untuk mengembangkan keterampilan abad ke-21 pada peserta didik.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="controls">
+        <button id="prevBtn">Sebelumnya</button>
+        <button id="nextBtn">Selanjutnya</button>
+    </div>
+    
+    <script>
+        const slides = document.getElementById('slides');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const progressBar = document.getElementById('progressBar');
+        
+        let currentSlide = 0;
+        const totalSlides = document.querySelectorAll('.slide').length;
+        
+        function updateSlidePosition() {
+            slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+            progressBar.style.width = `${(currentSlide / (totalSlides - 1)) * 100}%`;
+        }
+        
+        function nextSlide() {
+            if (currentSlide < totalSlides - 1) {
+                currentSlide++;
+                updateSlidePosition();
+            }
+        }
+        
+        function prevSlide() {
+            if (currentSlide > 0) {
+                currentSlide--;
+                updateSlidePosition();
+            }
+        }
+        
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') {
+                nextSlide();
+            } else if (e.key === 'ArrowLeft') {
+                prevSlide();
+            }
+        });
+        
+        // Touch navigation
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        document.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+        
+        document.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+        
+        function handleSwipe() {
+            if (touchEndX < touchStartX - 50) {
+                nextSlide();
+            } else if (touchEndX > touchStartX + 50) {
+                prevSlide();
+            }
+        }
+        
+        // Initialize
+        updateSlidePosition();
+    </script>
+</body>
+</html>
