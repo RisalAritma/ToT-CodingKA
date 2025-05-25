@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peta Konsep: Pengelolaan Data dan Penyusunan Instruksi</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #3498db;
+        }
+        .mindmap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .root {
+            background-color: #3498db;
+            color: white;
+            padding: 15px;
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .main-branches {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        .branch {
+            width: 45%;
+            margin: 0 10px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .main-topic {
+            background-color: #2ecc71;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        .content {
+            padding: 15px;
+            background-color: #f9f9f9;
+        }
+        .subtopic {
+            background-color: #f1c40f;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            text-align: center;
+            font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .cornerstone {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .cornerstone-item {
+            width: 48%;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .cornerstone-title {
+            background-color: #e74c3c;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .cornerstone-content {
+            padding: 10px;
+            background-color: white;
+        }
+        .activity {
+            margin-top: 20px;
+        }
+        .activity-item {
+            background-color: #9b59b6;
+            color: white;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .activity-steps {
+            background-color: white;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .step {
+            margin-bottom: 5px;
+            padding-left: 20px;
+            position: relative;
+        }
+        .step:before {
+            content: "•";
+            position: absolute;
+            left: 5px;
+            color: #3498db;
+        }
+        .model {
+            margin-top: 20px;
+        }
+        .model-item {
+            background-color: #1abc9c;
+            color: white;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .model-formula {
+            background-color: white;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            font-family: 'Courier New', monospace;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        @media (max-width: 768px) {
+            .main-branches {
+                flex-direction: column;
+            }
+            .branch {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            .cornerstone-item {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Peta Konsep: Pengelolaan Data dan Penyusunan Instruksi</h1>
+        
+        <div class="mindmap">
+            <div class="root">Berpikir Komputasional dalam Pengelolaan Data</div>
+            
+            <div class="main-branches">
+                <div class="branch">
+                    <div class="main-topic">Konsep Dasar dan Empat Cornerstone</div>
+                    <div class="content">
+                        <div class="subtopic">Definisi dan Konsep Dasar</div>
+                        <ul>
+                            <li><strong>Berpikir Komputasional:</strong> Cara berpikir untuk memecahkan masalah dengan pendekatan logis dan sistematis</li>
+                            <li><strong>Konteks Penerapan:</strong> Data science dan kecerdasan artifisial</li>
+                            <li><strong>Tujuan:</strong> Membantu pengambilan keputusan melalui pengolahan data secara terstruktur</li>
+                            <li><strong>Hasil yang Diharapkan:</strong> Pemecahan masalah secara efisien, efektif, dan optimal</li>
+                        </ul>
+                        
+                        <div class="cornerstone">
+                            <div class="cornerstone-item">
+                                <div class="cornerstone-title">Dekomposisi</div>
+                                <div class="cornerstone-content">
+                                    <p><strong>Definisi:</strong> Pemecahan masalah besar menjadi sub-masalah yang lebih kecil</p>
+                                    <p><strong>Penerapan:</strong></p>
+                                    <ul>
+                                        <li>Mengidentifikasi data yang diperlukan</li>
+                                        <li>Menentukan sumber data</li>
+                                        <li>Membagi masalah menjadi komponen yang lebih mudah dikelola</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="cornerstone-item">
+                                <div class="cornerstone-title">Pengenalan Pola</div>
+                                <div class="cornerstone-content">
+                                    <p><strong>Definisi:</strong> Mengidentifikasi tren dan kesamaan dalam data</p>
+                                    <p><strong>Teknik Pembersihan Data:</strong></p>
+                                    <ul>
+                                        <li>Standardisasi format data</li>
+                                        <li>Mengatasi outlier (nilai ekstrem)</li>
+                                        <li>Deduplikasi (menghilangkan data ganda)</li>
+                                        <li>Mengatasi missing values</li>
+                                        <li>Validasi data</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="cornerstone-item">
+                                <div class="cornerstone-title">Abstraksi</div>
+                                <div class="cornerstone-content">
+                                    <p><strong>Definisi:</strong> Menyederhanakan informasi dengan fokus pada data penting</p>
+                                    <p><strong>Penerapan:</strong></p>
+                                    <ul>
+                                        <li>Mengekstraksi fitur-fitur penting dari data mentah</li>
+                                        <li>Mengabaikan detail yang tidak relevan</li>
+                                        <li>Perhitungan statistik dasar (rata-rata, standar deviasi)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="cornerstone-item">
+                                <div class="cornerstone-title">Algoritma</div>
+                                <div class="cornerstone-content">
+                                    <p><strong>Definisi:</strong> Menyusun langkah-langkah sistematis untuk menyelesaikan masalah</p>
+                                    <p><strong>Karakteristik:</strong></p>
+                                    <ul>
+                                        <li>Instruksi yang jelas dan logis</li>
+                                        <li>Urutan yang benar dalam proses perhitungan</li>
+                                        <li>Dapat diimplementasikan dalam pemrograman</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="subtopic">Jenis Data dalam Pengelolaan</div>
+                        <div style="display: flex; justify-content: space-between;">
+                            <div style="width: 48%;">
+                                <p><strong>Berdasarkan Sifat:</strong></p>
+                                <ul>
+                                    <li>Data Kualitatif: Kategori atau atribut</li>
+                                    <li>Data Kuantitatif:
+                                        <ul>
+                                            <li>Data diskrit: Hasil membilang</li>
+                                            <li>Data kontinu: Hasil mengukur</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div style="width: 48%;">
+                                <p><strong>Berdasarkan Cara Memperoleh:</strong></p>
+                                <ul>
+                                    <li>Data Primer: Langsung dari sumber</li>
+                                    <li>Data Sekunder: Dari pihak lain</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="branch">
+                    <div class="main-topic">Penyusunan Instruksi dan Aktivitas Pembelajaran</div>
+                    <div class="content">
+                        <div class="subtopic">Langkah-langkah Penyusunan Instruksi</div>
+                        <ol>
+                            <li>Tentukan jarak yang akan ditempuh</li>
+                            <li>Tentukan kecepatan rata-rata kendaraan</li>
+                            <li>Hitung waktu tempuh dasar (Waktu = Jarak / Kecepatan)</li>
+                            <li>Tambahkan waktu ekstra sebagai faktor eksternal</li>
+                            <li>Tambahkan waktu istirahat</li>
+                            <li>Hitung total waktu tempuh</li>
+                        </ol>                       
+
+                        
+                        <div class="activity">
+                            <div class="activity-item">Aktivitas 1: Mengidentifikasi Data</div>
+                            <div class="activity-steps">
+                                <div class="step">Identifikasi data yang diperlukan (tanggal, waktu, jarak, kondisi lalu lintas)</div>
+                                <div class="step">Tentukan sumber data yang dapat digunakan</div>
+                                <div class="step">Kumpulkan contoh data</div>
+                            </div>
+                            
+                            <div class="activity-item">Aktivitas 2: Pembersihan dan Validasi Data</div>
+                            <div class="activity-steps">
+                                <div class="step">Periksa kelengkapan data</div>
+                                <div class="step">Lakukan deteksi dan penanganan outlier</div>
+                                <div class="step">Samakan satuan pengukuran</div>
+                            </div>
+                            
+                            <div class="activity-item">Aktivitas 3: Klasifikasi dan Pengelompokan</div>
+                            <div class="activity-steps">
+                                <div class="step">Kelompokkan data berdasarkan rentang jarak</div>
+                                <div class="step">Kelompokkan data berdasarkan waktu perjalanan</div>
+                                <div class="step">Kelompokkan data berdasarkan hari dalam seminggu</div>
+                                <div class="step">Kelompokkan data berdasarkan jenis jalan dan kondisi lalu lintas</div>
+                            </div>
+                            
+                            <div class="activity-item">Aktivitas 4: Abstraksi Data</div>
+                            <div class="activity-steps">
+                                <div class="step">Lakukan perhitungan statistik dasar</div>
+                                <div class="step">Identifikasi faktor-faktor yang mempengaruhi waktu tempuh</div>
+                                <div class="step">Kembangkan model perhitungan waktu tempuh</div>
+                            </div>
+                            
+                            <div class="activity-item">Aktivitas 5: Penyusunan Instruksi</div>
+                            <div class="activity-steps">
+                                <div class="step">Implementasikan algoritma perhitungan waktu tempuh</div>
+                                <div class="step">Gunakan aplikasi blockly (Scratch, Pictoblox) untuk implementasi</div>
+                                <div class="step">Uji dan evaluasi hasil perhitungan</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
